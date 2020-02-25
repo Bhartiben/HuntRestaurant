@@ -7,12 +7,6 @@
 
 PART OF A PERSONAL PROJECT
 
-----Features included----
->> View Restaurants with name, Location and cuisine type
->> Search Restaurant by name
->> Go in detail page of particular Restaurant
->> Add new restaurant , edit existing restaurant , delete restaurant
-
 ----Coding features----
 >> Drilling into Data
 >> Worked with Models and Model Binding
@@ -34,5 +28,11 @@ PART OF A PERSONAL PROJECT
 >> Entity framework
 >> Nudget Package
 >> Sql server
+
+----Features included----
+>> View Restaurants with name, Location and cuisine type
+>> Search Restaurant by name
+>> Go in detail page of particular Restaurant
+>> Add new restaurant , edit existing restaurant , delete restaurant
 
 Thank You
