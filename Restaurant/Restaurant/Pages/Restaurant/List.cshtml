@@ -1,0 +1,58 @@
+﻿@page
+@model ListModel
+@{
+    ViewData["Title"] = "List";
+}
+
+<h2>Restaurants</h2>
+<form method="get">
+    <div class="form-group">
+        <div class="input-group">
+            <input asp-for="SearchTerm" type="search" class="form-control" />
+            <span class="input-group-btn">
+                <button class="btn btn-default">
+                    <i class="glyphicon glyphicon-search">  </i>
+                </button>
+            </span>
+        </div>
+    </div>
+    @if (Model.Message != null)
+    {
+        <div class="alert alert-info">
+            @Model.Message
+        </div>
+    }
+
+</form>
+<table class="table">
+   @foreach (var restaurant in Model.restaurant)
+   {
+    <tr>
+        <td> @restaurant.Name</td>
+        <td>@restaurant.Location</td>
+        <td>@restaurant.Cuisine</td>
+
+        <td>
+            <a asp-page="./Detail" class="btn btn-lg" asp-route-restaurantid="@restaurant.id"> <i class="glyphicon glyphicon-zoom-in">  </i></a>
+
+
+
+        </td>
+        <td>
+            <a asp-page="./Edit" class="btn btn-lg" asp-route-restaurantid="@restaurant.id"> <i class="glyphicon glyphicon-edit">  </i></a>
+
+
+
+        </td>
+        <td>
+
+            <a asp-page="./Delete" class="btn btn-lg" asp-route-restaurantid="@restaurant.id"> <i class="glyphicon glyphicon-trash">  </i></a>
+
+
+
+
+        </td>
+    </tr>
+   }
+</table>
+<a class="btn btn-primary" asp-page="./Edit">Add Restaurant</a>

@@ -1,0 +1,15 @@
+﻿@page  "{restaurantid:int}"
+@model DeleteModel
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h2>@Model.restaurants.Name</h2>
+<form method="post">
+    <input type="hidden" asp-for="restaurants.id" />
+
+    <button class="btn btn-primary" type="submit">Delete</button>
+
+</form>
+
+
